@@ -19,7 +19,7 @@ class DataStack(Stack):
         s3deploy.BucketDeployment(
             self,
             "DeployData",
-            sources=[s3deploy.Source.asset("../dataset/titanic.csv")],
+            sources=[s3deploy.Source.asset("../dataset/")],
             destination_bucket=data_lake_bucket,
             destination_key_prefix="titanic",
         )
